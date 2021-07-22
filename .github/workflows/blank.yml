@@ -21,5 +21,4 @@ jobs:
       with:
         github-token: ${{github.token}}
         script: |
-          github.issues.createComment({...context.repo, issue_number: 1, body: 'Hello github actons!' + new Date().toLocaleString('ja-JP')
-})
+          github.issues.createComment({...context.repo, issue_number: 1, body: 'Hello github actons!' + new Date().toLocaleString('ja-JP')})

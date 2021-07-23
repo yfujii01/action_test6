@@ -8,6 +8,9 @@ on:
     - cron:  '0,15,30,45 * * * *'
   workflow_dispatch:
 
+env:
+  TZ: 'Asia/Tokyo'
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -16,7 +19,6 @@ jobs:
     - name: Run a one-line script
       run: |
         echo Hello, world!
-        ln -sf /usr/share/zoneinfo/Asia/Tokyo /etc/localtime
         date
     - uses: actions/github-script@0.2.0
       with:
